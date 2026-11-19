@@ -26,7 +26,13 @@ public class BioskopWithScanner28 {
                 sc.nextLine();
 
                 penonton[baris - 1][kolom - 1] = nama;
-                
+
+                if (baris < 1 || baris > penonton.length || kolom < 1 || kolom > penonton[baris - 1].length) {
+                    System.out.println("Baris atau kolom tidak tersedia!");
+                } else {
+                    penonton[baris - 1][kolom - 1] = nama;
+                    System.out.println("Data berhasil ditambahkan!");
+                }
             } else if (menu == 2) {
                 for (int i = 0; i < penonton.length; i++) {
                     for (int j = 0; j < penonton[i].length; j++) {
